@@ -5,11 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 :root{
-    font-size:18px;
-  --font-family: 'Caveat';
+  --font-size:18px;
+  --font-family:'Caveat';
   --bg-dark: black;
   --bg-white: #fff;
-  --text-hover: #f0ed65;
+  --text-hover: #a09743;
   --text-white: #fff;
   --text-accent: #b0aca5;
  
@@ -135,64 +135,79 @@ a:not([class]) {
   scroll-margin-block: 5ex;
 }
 
+html{
+  color:var(--text-accent);
+  font-size: var(--fs-400);
+  font-family: var(--font-family);
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
 /* set up the body */
 body {
   margin:0;
   padding:0;
   line-height: 1.2;
-  color:var(--text-accent);
-  font-size: var(--fs-400);
   background-image: url(header.jpg);
  }
-/*main{
- min-height: 100dvh;
-}*/
-header{
-padding: 0rem 0;
-}
-.wrapper{
-  
-  margin-inline: 0 auto;
-  padding:0;
-  text-align: center;
-  width:100%;
+
+main{
   max-width:100%;
+  width: 100%;
+  margin: 0 auto;
+  padding:0;
 }
 
-.intro{
-  font-family: var(--font-family);
-  color:var(--text-accent);
-  font-size: var(--fs-400);
-  padding:0 0;
-  text-align: center;
+header{
+  max-width:100%;
+  width: 100%;
   margin-inline: 0 auto;
+  padding:2rem 0;
+}
+
+
+.wrapper{
+  display:flex;
+  margin: 0 auto;
+  padding:0;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+.intro{
+  min-width:100%;
+  width: 100%;
+  margin: 0 auto;
+  padding:0;
   display: flex;
   flex-direction:column;
   flex-wrap: nowrap;
   flex-basis: auto;
-  gap:10rem;
+  text-align: center;
   justify-content: space-evenly;
   align-items: center;
-}
+ }
 
 .front{
-  font-family: var(--font-family);
-  color:var(--text-accent);
-  font-size: var(--fs-400);
-  padding:0 0;
-  text-align: center;
-  margin-inline: 0 auto;
+  min-width:100%;
+  width: 100%;
+  margin: 0 auto;
+  padding:0;
   display: flex;
   flex-direction:row;
   flex-wrap: nowrap;
   flex-basis: auto;
-  gap:10rem;
+  text-align: center;
   justify-content: space-evenly;
   align-items: center;
-}
+ }
 
 .col{
-width:100%;
+max-width:100%;
+width:fit-content;
 place-items: center;
  }
 
