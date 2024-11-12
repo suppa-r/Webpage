@@ -12,6 +12,20 @@
 </head>
 <style>
 
+
+	nav {
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-gradient-text {
+  position: relative;
+  top: -50px;
+  left: -0px;
+  z-index: 0;
+}
+
+
 /*body {
   display: flex;
   justify-content: center;
@@ -26,7 +40,8 @@
   font-weight: bold;
   display: flex;
   color: transparent;
-  perspective: 270px;
+  /*perspective: 270px;*/
+  perspective: 400px;
 }
 
 .text-layer {
@@ -34,10 +49,10 @@
   transform: rotateX(-30deg) translateZ(70px);
   background: linear-gradient(
     109.6deg,
-    rgba(112, 246, 255, 0.33) 11.2%,
-    rgba(221, 108, 241, 0.26) 42%,
-    rgba(162, 172, 127, 0.534) 71.5%,
-    rgba(123, 183, 253, 1) 100.2%
+    rgb(231, 223, 201) 11.2%,
+    rgb(210, 211, 142) 42%,
+    rgba(226, 233, 202, 0.877) 71.5%,
+    rgb(144, 169, 197) 100.2%
   );
   text-shadow: 0px 15px 0px rgba(181, 199, 201, 0.33);
 
@@ -59,12 +74,12 @@
 
 @keyframes shadowDrip {
   0% {
-    text-shadow: 0px 5px 0px rgba(112, 246, 255, 0.33);
+    text-shadow: 0px 5px 0px rgba(210, 226, 167, 0.753);
   }
   100% {
-    text-shadow: 0px 20px 30px rgba(74, 26, 26, 0.3),
-      0px 30px 40px rgba(221, 108, 241, 0.26),
-      0px 70px 5px rgba(180, 111, 111, 0.2);
+    text-shadow: 0px 20px 30px rgba(168, 122, 122, 0.966),
+      0px 30px 40px rgba(183, 151, 189, 0.822),
+      0px 70px 5px rgba(192, 171, 171, 0.781);
   }
 }
 
@@ -120,10 +135,7 @@
 
 </div>
 
-<br><br>
 
-
-<!--<p><span>Myself</span></p>-->
 
 <p> Let’s face it------if you want to get to know someone<br> you may as well genuinely go to 
 the source<br> and not hover kind of on the edge.<br> Well sit back, and relax 
