@@ -163,10 +163,12 @@ p{
 
 
 .d  {
-  margin-inline: 20rem auto;
-  width: 15%;
+  margin-inline: 20rem 0;
+  padding: 0 auto;
+  width: 19%;
   background-color:  #575f6a;
   color: #fff;
+  font-size: var(--fs-500);
  
  
 }
