@@ -3,6 +3,8 @@
 /* ------------------- */
 
 :root{
+   /* font-families */
+   --ff-serif: "Montserrat", serif;
   --font-size:1.125rem;
 
   --font-family:var(--ff-serif);
@@ -19,8 +21,7 @@
    
    font-weight:100;
 
-  /* font-families */
-  --ff-serif: "Montserrat", serif;
+ 
 
 /* colors */
 
@@ -77,7 +78,7 @@ picture {
 
 
 p {
-font-family:'Montserrat', serif;
+font-family:var(--ff-serif);
 font-weight: 100;
 letter-spacing: 2.0px; 
 text-align: left;
@@ -104,19 +105,7 @@ h2 {
   text-align: center;
   text-justify: center;
 }
-/* set up the body */
-body {
-  margin:0;
-  padding:0;
-  line-height: 1.2;
-  background-image: url(header.jpg);
-  font-family: var(--ff-serif);
-  font-weight: 100;
-  font-size: var(--fs-400);
-  color:var(--clr-white);
-  line-height: 1.5;
-  min-height: 100vh;
-}
+
 
 
 /* ------------------- */
@@ -184,7 +173,7 @@ p span{
   margin-inline: 0 auto;
   padding: 0 auto;
   color:#575f6a;
-  font-family:var(--font-family);
+  font-family:var(--ff-serif);
   font-size: var(--fs-500);
   font-weight: 700;
   text-align: center;
@@ -195,7 +184,7 @@ p span{
 p{
   margin-top: 0;
   color:var(--text-white);
-  font-family:var(--font-family);
+  font-family:var(--ff-serif);
   font-weight: 100;
   font-size: var(--fs-400);
   text-overflow: 0 0 1rem rgb(0 0 0/0.2);
@@ -218,7 +207,7 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
   color:currentColor;
   color:var(--text-white);
-  font-family: var(--font-family);
+  font-family:var(--ff-serif);
   font-size: var(--fs-400);
   font-weight: 100;
 }
@@ -226,6 +215,20 @@ a:not([class]) {
 /* anything that has been anchored to should have extra space*/
 :target{
   scroll-margin-block: 5ex;
+}
+
+/* set up the body */
+body {
+  margin:0;
+  padding:0;
+  line-height: 1.2;
+  background-image: url(header.jpg);
+  font-family: var(--ff-serif);
+  font-weight: 100;
+  font-size: var(--fs-400);
+  color:var(--clr-white);
+  line-height: 1.5;
+  min-height: 100vh;
 }
 
 
