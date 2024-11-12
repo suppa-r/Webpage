@@ -162,6 +162,15 @@ p{
 }
 
 
+.d  {
+  margin-inline: 20rem auto;
+  width: 15%;
+  background-color:  #575f6a;
+  color: #fff;
+ 
+ 
+}
+
 
 /*set shorter line heights for header*/
 h1, h2, h3, h4, button, input{
