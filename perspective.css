@@ -21,7 +21,7 @@
     color: #333;
   }
   
-  html,
+  /*html,
   body {
     height: 100vh;
     height: 100dvh;
@@ -33,14 +33,14 @@
     display: grid;
     grid-template-rows: calc(100dvh - 4rem) 4rem;
     font-family: system-ui, sans-serif;
-  }
+  }*/
   
-  canvas,
+  /*canvas,
   .editor,
-  #controls {
+  controls {
     grid-row: 1;
     grid-column: 1;
-  }
+  }*/
   
   canvas {
     width: 100%;
@@ -52,7 +52,7 @@
   
   .editor,
   .overlay,
-  #error {
+  .error {
     background: repeating-linear-gradient(0deg, #000a, #1119, #000a .25rem);
     padding: 1em;
   }
@@ -68,7 +68,7 @@
     outline: none;
   }
   
-  #error {
+  .error {
     grid-row: 2;
     grid-column: 1;
     margin: 0;
@@ -79,7 +79,7 @@
     text-wrap: pretty;
   }
   
-  #indicator {
+  .indicator {
     visibility: hidden;
     position: absolute;
     top: calc(var(--top, 0px) - var(--scroll-top, 0px));
@@ -106,7 +106,7 @@
     white-space: pre;
   }
   
-  #controls {
+  .controls {
     position: fixed;
     top: 1em;
     right: 2em;
@@ -175,12 +175,12 @@
   }
   
   .hidden {
-    display: none !important;
+    display: none!;
   }
   
   .opaque {
-    opacity: 1 !important;
-    background: #111 !important;
+    opacity: 1;
+    background: #111;
   }
   
   input {
@@ -201,28 +201,28 @@
     line-height: 1;
   }
   
-  #btnToggleView {
+  .btnToggleView {
     width: 1.25em;
   }
   
-  #btnToggleView::after {
+  .btnToggleView::after {
     content: '👁';
   }
   
-  #btnToggleView:checked::after {
+  .btnToggleView:checked::after {
     content: '✏️';
   }
   
- #btnToggleResolution::after {
+ .btnToggleResolution::after {
     content: '⚙️'; /* Update the content to only include the emoji */
 }
 
-#btnToggleResolution:checked::after {
+.btnToggleResolution:checked::after {
     content: '⚙️'; /* Update the content to only include the emoji */
 }
 
   
-  #btnReset::after {
+  .btnReset::after {
     content: '⏮️';
   }
   
