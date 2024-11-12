@@ -1,34 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="perspective.css">
-     <script src="perspective.js" defer></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="perspective.css">
+ 
+  <script type="text/javascript" src="perspective.js" defer></script>
 </head>
+<style>
+	nav {
+  position: relative;
+  z-index: 1;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+</style>
+
 <body>
-	<a class="skip-to-content" href="#main">Skip to content</a>
-	<header class="primary-header flex">
-	 
-		<nav>
-			<ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">01</span>Home</a>
-				  <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Bio</a>
-			       <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="architectural.html"><span aria-hidden="true">03</span>Architecture</a>
-					<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="photography.html"><span aria-hidden="true">04</span>Photography</a>
-					<li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="perspective.html"><span aria-hidden="true">05</span>Fun</a>
-					 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="contact.html"><span aria-hidden="true">06</span>Contact</a>
+	
+<div>
+	<nav>
+		
+		<ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="intro.html">Intro</a></li>
+		  <li><a href="profile.html">Profile</a>
+			<ul>
+			  <li><a href="#">Genesis</a></li>
+			  <li><a href="#">Beginining</a></li>
+			  <li><a href="#">Ryerson</a></li>
 			</ul>
-		</nav>
-	</header>
-<div class="canvas-container">
+		  </li>
+		  <li><a href="architecture.html">Architecture</a>
+			<ul>
+			  <li><a href="#">Commercial</a></li>
+			  <li><a href="#">Residential</a></li>
+			  <li><a href="#">Conceptual</a>
+			  <li><a href="#">What You Get</a>
+				<ul>
+				  <li><a href="#">My Prices</a></li>
+				  <li><a href="#">What They're Saying</a></li>
+				  <li><a href="#">What I Do</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </li>
+		 
+		  <li><a href="perspective.html">Distraction</a></li>
+		  <li><a href="#">Contact Me</a></li>
+		  <li><a href="#">Inspiration</a></li>
+		
+		</ul>
+		<p class="fs-600" style="margin-inline: 0 auto; background-color: #4b545f;">Follow<span>along!</span>Move<span>along...</span></p>
+	  </nav>
+	
+</div> 
 
 
-<canvas role="img" aria-label="A tree growing until it bears fruit, dropping its fruit, shrinking, and repeating the cycle"></canvas>
+<main>
+	
+	<div class="fun">
+		
+	
+<canvas id="canvas"></canvas>
+<textarea id="codeEditor" class="editor" spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" oninput="render()"></textarea>
+<pre id="error"></pre>
+<div id="indicator"></div>
+<div id="controls">
+ <div class="controls">
+    <input id="btnToggleView" class="icon" type="checkbox" name="toggleView" onclick="toggleView()">
+    <input id="btnToggleResolution" class="icon" type="checkbox" name="toggleResolution" onchange="toggleResolution()">
+    <input id="btnReset" class="icon" type="checkbox" name="reset" onclick="reset()">
+ </div>
+</div>
+	</div>
+	
+	
 
-</body></html>
+
+
+	
+
+</main>
+
+</html>
 <script type="x-shader/x-fragment">#version 300 es
+
+
 precision highp float;
 out vec4 O;
 uniform vec2 resolution;

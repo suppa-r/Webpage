@@ -2,16 +2,48 @@
 /* Custom properties   */
 /* ------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 
 :root{
-  --font-size:18px;
-  --font-family:'Caveat';
+  --font-size:0.85 rem;
+  --font-family:var(--ff-serif);
   --bg-dark: black;
   --bg-white: #fff;
   --text-hover: #a09743;
   --text-white: #fff;
-  --text-accent: #b0aca5;
+  --text-accent: #5ec7d4;
+
+ /* font-families */
+ --ff-serif: "roboto-regular", serif;
+
+
+
+
  
 /* colors */
 
@@ -31,7 +63,7 @@
 .uppercase { text-transform: uppercase; }
 
 --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
---fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+--fs-400: clamp(1.0rem, calc(1.06rem + 0.33vw), 1.31rem);
 --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
 --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
 --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
@@ -56,11 +88,23 @@
 }
 /* prevent font size inflation*/
 html{
-  
+
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
    text-size-adjust: none;
 }
+
+/* set up the body */
+body {
+  
+  font-family: var(--font-family);
+  color:var(--text-white);
+  font-size: var(--fs-400);
+  margin:0;
+  padding:0;
+  line-height: 1.2;
+  background-image: url(header.jpg);
+ }
 
 /*remove default margin in favor of better control*/
 body, h1, h2, h3, h4, p, figure, blockquote{
@@ -102,9 +146,9 @@ select
   font-family:inherit;
 }
 
-span{
-  color:var(--text-accent);
-  font-family:var(--font-family);
+p span{
+  color:#575f6a;
+  font-family:'roboto-bold-italic';
   font-size: var(--fs-500);
   font-weight: 900;
   text-align: center;
@@ -112,7 +156,12 @@ span{
 
 p{
   margin-top: 0;
+  color:var(--text-white);
+  font-family:var(--font-family);
+  font-size: var(--fs-400);
 }
+
+
 
 /*set shorter line heights for header*/
 h1, h2, h3, h4, button, input{
@@ -124,10 +173,11 @@ h1, h2, h3, h4, p{
   text-wrap: balance;
 }
 
-/* a that don't have a class get degault*/
+/* a that don't have a class get default*/
 a:not([class]) {
   text-decoration-skip-ink: auto;
   color:currentColor;
+  color:var(--text-white);
 }
 
 /* anything that has been anchored to should have extra space*/
@@ -135,90 +185,78 @@ a:not([class]) {
   scroll-margin-block: 5ex;
 }
 
-html{
-  color:var(--text-accent);
-  font-size: var(--fs-400);
-  font-family: var(--font-family);
-}
 
-/* ------------------- */
-/* Reset               */
-/* ------------------- */
 
-/* set up the body */
-body {
-  margin:0;
-  padding:0;
-  line-height: 1.2;
-  background-image: url(header.jpg);
- }
 
 main{
-  max-width:100%;
-  width: 100%;
   margin: 0 auto;
-  padding:0;
+  padding: 0;
 }
 
-header{
+/*header{
   max-width:100%;
   width: 100%;
   margin-inline: 0 auto;
   padding:2rem 0;
-}
+}*/
 
 
 .wrapper{
-  display:flex;
-  margin: 0 auto;
-  padding:0;
+  max-width: 95%;
+  width:100rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  justify-content: space-evenly;
-  align-items: center;
- }
+  place-items: center;
+  padding:0;
+  margin: 0 auto;
+}
 
 .intro{
-  min-width:100%;
-  width: 100%;
-  margin: 0 auto;
-  padding:0;
-  display: flex;
-  flex-direction:column;
-  flex-wrap: nowrap;
-  flex-basis: auto;
+  max-width: 95%;
+  width:120rem;
+  display: grid;
+  grid-template-rows: 1fr;
   text-align: center;
-  justify-content: space-evenly;
-  align-items: center;
+  place-items: center;
+  padding:0;
+  margin: 0 auto;
  }
 
 .front{
-  min-width:100%;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 95%;
+  width:120rem;
   padding:0;
-  display: flex;
-  flex-direction:row;
-  flex-wrap: nowrap;
-  flex-basis: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+
+ }
+
+ .fun{
+  max-width: 95%;
+  width:120rem;
+  padding:0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows:3rem 1fr;
+ 
   text-align: center;
-  justify-content: space-evenly;
   align-items: center;
+
  }
 
-.col{
-max-width:100%;
-width:fit-content;
-place-items: center;
- }
 
- nav {
-  position:fixed;
-  top:0rem;
-  left:15rem;
-  margin: 0px auto; 
-  padding-top: 2rem;
-  color:var(--text-accent);
-  font-size: var(--fs-400);
+
+ 
+
+
+nav {
+  color: var(--text-white);
+  font-size: 18px; 
+  line-height: 24px;
+  margin: 100px auto; 
   text-align: center;
 }
 
@@ -232,6 +270,7 @@ nav ul ul {
 
 
 nav ul {
+ 
   background: #efefef; 
   background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
   background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
@@ -262,7 +301,7 @@ nav ul {
     
     nav ul li a {
       display: block; padding: 25px 40px;
-      color: #757575; text-decoration: none;
+      color: var(--text-white); text-decoration: none;
     }
       
     
@@ -276,8 +315,8 @@ nav ul {
       border-bottom: 1px solid #575f6a; position: relative;
     }
       nav ul ul li a {
-        padding: 15px 40px;
-        color: #fff;
+        padding: 15px 45px;
+        color: var(--text-white);
       } 
         nav ul ul li a:hover {
           background: #4b545f;
@@ -286,4 +325,3 @@ nav ul {
   nav ul ul ul {
     position: absolute; left: 100%; top:0;
   }
-
