@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raffaele Suppa | Webpage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
     <link href="css.css" rel="stylesheet" />
 </head>
@@ -22,7 +19,7 @@
       }
     }
    
-    .rc_pattern {
+    #rc_pattern {
       mask-image: radial-gradient(circle at center center, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
       position: relative;
       display: inline-block;
@@ -30,14 +27,14 @@
       padding-top:10rem;
     }
    
-    .rc_pattern svg {
-      width: 80%;
+    #rc_pattern svg {
+      width: 100%;
       height: auto;
     }
    
-    .rc_pattern .pulse>rect {
+    #rc_pattern #pulse>rect {
       /*animation: moveGradient 6s linear infinite;*/
-      animation: moveGradient .3ms linear .11ms infinite;
+      animation: moveGradient .8s linear .11s infinite;
        /*cubic-bezier(0.65, 0.05, 0.36, 1) */
     }
    </style>
@@ -78,21 +75,20 @@
 <main>
 
 <div class="wrapper">
-<div>
+<div class="col"> 
     <img src="welcome.jpg"alt="raffaele">
   </div>
+ <div class="col"> 
+<p class="w3-center">The way it began....The way it is.</p>
 
-  <div>
-<p class="w3-center w3-padding-16">The way it began....The way it is.<br>
-
-If I had a Secret, I'm gonna tell it!</p>
+<p>If I had a Secret, I'm gonna tell it!</p>
  <br>
  
- <p class="w3-center w3-padding-16"><a href="intro.html" style="text-decoration: none;">Click ..For the Next Stop.  I'm gonna let you stay!</a></p>
+<p><a href="intro.html">Click .. Get Started</a></p>
 </div>
 
 
-<div>
+<div class="col">
   <div id="rc_pattern">
   <svg width="500" height="433" viewBox="0 0 511 433" fill="none" xmlns="http://www.w3.org/2000/svg">
   <mask id="mask">
@@ -730,7 +726,6 @@ If I had a Secret, I'm gonna tell it!</p>
 </div>
 </div>
 </div>
-
 </main>
 </body>
 </html>
@@ -753,4 +748,7 @@ If I had a Secret, I'm gonna tell it!</p>
 
 
    
-
+</main>
+</body>
+ 
+</html>
