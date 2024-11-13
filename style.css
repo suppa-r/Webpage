@@ -98,6 +98,8 @@ html{
 body {
   display:flex;
   flex-direction: column;
+  place-items:center;
+ flex-grow:1 ;
   min-height: 100dvh;
   font-family: var(--font-family);
   color:var(--text-white);
@@ -106,6 +108,7 @@ body {
   padding:0;
   line-height: 1.2;
   background-image: url(header.jpg);
+  overflow: hidden;
  }
 
 /*remove default margin in favor of better control*/
@@ -194,7 +197,12 @@ main{
   flex:1;
   margin: 0 auto;
   padding: 0;
+  min-height: 100dvh;
+  max-width: 100%;
+  overflow-y: hidden;
 }
+
+
 
 /*header{
   max-width:100%;
@@ -202,13 +210,32 @@ main{
   margin-inline: 0 auto;
   padding:2rem 0;
 }*/
+.fun{
+  max-width: 100%;
+
+  padding:0;
+  margin: 0 auto;
+ 
+ min-height: 100dvh;
+  text-align: center;
+
+
+ }
+
+ .tree{
+  min-height: 80dvh;
+  max-width: 100%;
+  width: fit-content;
+  margin-inline: auto;
+ place-items: center;
+}
 
 
 .wrapper{
   max-width: 95%;
   width:90rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   gap:4rem;
   text-align: center;
   place-items: center;
@@ -216,14 +243,45 @@ main{
   margin: 0 auto;
 }
 
+.intro-ex{
+  min-height: 100dvh;
+
+  max-width: 100%;
+  width:150rem;
+  gap:4rem;
+  text-align: center;
+  place-items: center;
+  padding:0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.wrapper.intro {
+  background-image:url(h.jpg);
+    color: var(--text-white);
+    font-size: var(--fs-400);
+    font-family: var(--font-family);
+    gap:4rem;
+    margin:0 0;
+    min-height: 100dvh;
+    max-width: 100%;
+    overflow-y:hidden;
+   
+  }
+
+
+
+
 .intro{
-  height: 100%;
-  max-width: 95%;
-  width:120rem;
+  min-height: 100dvh;
+  max-width: 100%;
+  width:130rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   place-items: center;
+  gap:4rem;
   padding:0;
   margin: 0 auto;
  }
@@ -239,18 +297,21 @@ main{
 
  }
 
- .fun{
-  max-width: 95%;
-  width:120rem;
-  padding:0;
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows:3rem 1fr;
- 
-  text-align: center;
-  align-items: center;
 
- }
+
+ /*.wrapper.intro {
+  background-image:url(h.jpg);
+  font-size: var(--fs-400);
+  color: var(--text-white);
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  grid-template-areas: 't wc';
+  margin:0 0;
+  min-height: 100dvh;
+  max-width: 100%;
+  overflow-y: auto;
+  }*/
 
 
 
@@ -261,7 +322,7 @@ nav {
   color: var(--text-white);
   font-size: 18px; 
   line-height: 24px;
-  margin: 100px auto; 
+  margin: .5rem auto; 
   text-align: center;
 }
 

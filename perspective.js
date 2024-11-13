@@ -1,6 +1,4 @@
-/*********
- * made by Matthias Hurrle (@atzedent)
- */
+
 let editMode = false // set to false to hide the code editor on load
 let resolution = .5 // set 1 for full resolution or to .5 to start with half resolution on load
 let renderDelay = 1000 // delay in ms before rendering the shader after a change

@@ -8,12 +8,12 @@ class Tree {
 		this.c = this.C?.getContext("2d");
 		this.S = window.devicePixelRatio;
 		this.W = 800;
-		this.H = 800;
+		this.H = 600;
 		this.branches = [];
 		this.darkTheme = false;
 		this.debug = false;
 		this.decaying = false;
-		this.floorY = 685;
+		this.floorY = 585;
 		this.fruit = [];
 		this.gravity = 0.098;
 		this.loopDelay = 500;
