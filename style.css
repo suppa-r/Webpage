@@ -99,7 +99,7 @@ body {
   display:flex;
   flex-direction: column;
   place-items:center;
- flex-grow:1 ;
+  flex-basis:auto;
   min-height: 100dvh;
   font-family: var(--font-family);
   color:var(--text-white);
@@ -109,6 +109,19 @@ body {
   line-height: 1.2;
   background-image: url(header.jpg);
   overflow: hidden;
+ }
+
+ .intro{
+  min-height: 100dvh;
+  max-width: 100%;
+  width:140rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  place-items: center;
+  gap:0rem;
+  padding:0;
+  margin-inline: 0 auto;
  }
 
 /*remove default margin in favor of better control*/
@@ -273,18 +286,7 @@ main{
 
 
 
-.intro{
-  min-height: 100dvh;
-  max-width: 100%;
-  width:130rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  place-items: center;
-  gap:4rem;
-  padding:0;
-  margin: 0 auto;
- }
+
 
 .front{
   max-width: 95%;
